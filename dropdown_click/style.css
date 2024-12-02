@@ -1,0 +1,146 @@
+:root {
+    --primary-color: coral;
+    --secondary-color: chocolate;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background: #f4f4f4;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+#navbar ul {
+    position: relative;
+    list-style: none;
+}
+
+#navbar ul li {
+    color: #333;
+    display: inline-block;
+    padding: 1rem;
+    position: relative;
+}
+
+#navbar ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+/* Hide nested ul by default */
+/* This display has to be visible by a checkbox activation */
+#navbar ul li ul {
+    max-height: 0;
+    overflow:hidden;
+    transition: max-height 0.15s ease;
+}
+
+#navbar ul li ul li {
+    display: none;
+    transition: display 0.4s ease;
+}
+/* Hide nested ul by default */
+/* This display has to be visible by a checkbox activation */
+
+#navbar ul li:hover,
+#navbar ul .toggler:checked + li
+{
+    cursor: pointer;
+    background: var(--primary-color);
+    color: #fff;
+}
+
+#navbar ul li:hover a {
+    color: #fff;
+}
+
+/* Nested Dropdown Show */
+#navbar ul li ul {
+    width: 200px;
+    position: absolute;
+    left: 0;
+    margin-top: 1rem;
+}
+
+#navbar .toggler.services,
+#navbar .toggler.blog
+{
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    transform: translateX(25px);
+    opacity: 0;
+}
+
+#navbar .toggler.services {
+    transform: translateX(45px);
+}
+
+/* Toggler Animation */
+#navbar ul .toggler:checked + li ul {
+    max-height: 500px;
+}
+
+
+#navbar ul .toggler:checked + li ul li {
+    display: block;
+    background-color: #e7e7e7;
+}
+
+#navbar ul li:hover ul li a {
+    color: #333;
+}
+
+#navbar ul .toggler:checked + li ul li:hover {
+    background: #e0e0e0;
+    color: inherit;
+}
+
+#navbar ul .toggler:checked + li ul li span {
+    float: right;
+    color:#fff;
+    background: var(--primary-color);
+    padding: 0.2rem 0.5rem;
+    text-align: center;
+    font-size: 0.8rem;
+    border-radius: 5px;
+}
+
+#navbar ul .toggler:checked + li ul li:hover span {
+    background: var(--secondary-color);
+}
+
+#showcase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: var(--primary-color);
+}
+
+#showcase h1 {
+    color: #fff;
+    font-size: 4rem;
+}
+
+/* Mobile */
+@media(max-width: 600px) {
+    #navbar ul li {
+        display: block;
+    }
+
+    #navbar ul li:hover ul {
+        width: 100%;
+        position: relative;
+    }
+}

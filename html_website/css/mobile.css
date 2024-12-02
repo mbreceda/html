@@ -1,0 +1,65 @@
+/* Utilities */
+.l-heading {
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* Navbar */
+#navbar .logo {
+    float: none;
+    text-align: center;
+}
+
+#navbar ul, 
+#navbar ul li {
+    float: none;
+}
+
+#navbar ul li a {
+    padding: 5px;
+    border-bottom: #444 dotted 1px;
+}
+
+/* Showcase */
+#showcase .showcase-content {
+    padding-top: 70px;
+    padding-bottom: 30px;
+}
+
+/* Home Info */
+#home-info .info-img{
+    display: none;
+}
+
+#home-info .info-content  {
+    float: none;
+    width: 100%;
+}
+
+/* Features */
+.box {
+    float: none;
+    width: 100%;
+    padding: 50px;
+    text-align: center;
+}
+
+.box i {
+    margin-bottom: 3px;
+}
+
+/* About Info */
+#about-info .info-right,
+#about-info .info-left {
+    float: none;
+    width: 100%;
+}
+
+#about-info .info-right {
+    margin-top: 30px;
+}
+
+/* Contact Form */
+#contact-info .box {
+    border-bottom: #444 dotted 1px;
+}

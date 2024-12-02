@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Presentation</title>
+  </head>
+  <body>
+    <!-- Page 1 (Intro) -->
+    <section id="page-1" class="page">
+      <h1>Welcome To My Presentation</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci magni
+        architecto perspiciatis recusandae culpa! Ex ipsum at quibusdam! Maiores
+        est eveniet suscipit, voluptate at odio saepe asperiores nihil hic?
+        Nostrum voluptates assumenda cumque architecto voluptate numquam facilis
+        delectus ullam eos.
+      </p>
+      <div>
+        <a href="#page-2" class="btn">
+          Next Page <i class="fa-solid fa-circle-arrow-down"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Page 2 (Intro) -->
+    <section id="page-2" class="page">
+      <h1>Page Two</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci magni
+        architecto perspiciatis recusandae culpa! Ex ipsum at quibusdam! Maiores
+        est eveniet suscipit, voluptate at odio saepe asperiores nihil hic?
+        Nostrum voluptates assumenda cumque architecto voluptate numquam facilis
+        delectus ullam eos.
+      </p>
+      <div>
+        <a href="#page-1" class="btn btn-dark">
+          Prev Page <i class="fa-solid fa-circle-arrow-up"></i>
+        </a>
+        <a href="#page-3" class="btn">
+          Next Page <i class="fa-solid fa-circle-arrow-down"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Page 3 (Intro) -->
+    <section id="page-3" class="page">
+      <h1>Page Three</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci magni
+        architecto perspiciatis recusandae culpa! Ex ipsum at quibusdam! Maiores
+        est eveniet suscipit, voluptate at odio saepe asperiores nihil hic?
+        Nostrum voluptates assumenda cumque architecto voluptate numquam facilis
+        delectus ullam eos.
+      </p>
+      <div>
+        <a href="#page-2" class="btn btn-dark">
+          Prev Page <i class="fa-solid fa-circle-arrow-up"></i>
+        </a>
+        <a href="#page-4" class="btn">
+          Next Page <i class="fa-solid fa-circle-arrow-down"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Page 4 (Intro) -->
+    <section id="page-4" class="page">
+      <h1>Page Four</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci magni
+        architecto perspiciatis recusandae culpa! Ex ipsum at quibusdam! Maiores
+        est eveniet suscipit, voluptate at odio saepe asperiores nihil hic?
+        Nostrum voluptates assumenda cumque architecto voluptate numquam facilis
+        delectus ullam eos.
+      </p>
+      <div>
+        <a href="#page-3" class="btn btn-dark">
+          Prev Page <i class="fa-solid fa-circle-arrow-up"></i>
+        </a>
+      </div>
+    </section>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $(".btn").on("click", function (event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+          const hash = this.hash;
+          console.log("hash", hash);
+          $("html, body").animate(
+            {
+              scrollTop: $(hash).offset().top,
+            },
+            800
+          );
+        }
+      });
+    </script>
+  </body>
+</html>

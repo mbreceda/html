@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline & Block Styling</title>
+    <style>
+        * {
+            /* when padding is not getting pushed in the box aren't aligned */
+            box-sizing: border-box;
+        }
+
+        li {
+            display: inline;
+        }
+
+        li a {
+            padding-right: 10px;
+        }
+
+        img {
+            display: block;
+            margin: auto;
+        }
+
+        .box { 
+            /* display: inline; width gets ignored because display inline*/
+            display: inline-block;
+            width: 30%;
+            background: #f4f4f4;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Block element -->
+    <ul>
+        <li><a href="#">Techology</a></li>
+        <li><a href="#">Business</a></li>
+        <li><a href="#">Fashon</a></li>
+    </ul>
+
+    <br><br>
+    <!-- inline element -->
+    <img src="./img/leaf.png" alt="My image">
+
+    <br><br>
+
+    <div class="box">
+        <h3>Heading</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum repudiandae ducimus inventore blanditiis reprehenderit odio cum omnis natus voluptates nostrum?</p>
+    </div>
+    <div class="box">
+        <h3>Heading</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum repudiandae ducimus inventore blanditiis reprehenderit odio cum omnis natus voluptates nostrum?</p>
+    </div>
+    <div class="box">
+        <h3>Heading</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum repudiandae ducimus inventore blanditiis reprehenderit odio cum omnis natus voluptates nostrum?</p>
+    </div>
+</body>
+</html>
